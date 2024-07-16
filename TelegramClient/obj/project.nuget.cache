@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0BoD3GLG5fA3zZzAxheVJPVRayB+VTOI0sE8KFKCumReIyKdcWYhYYv1hu0J6VSq915PzurETQ7lv4qPF70yIw==",
+  "dgSpecHash": "LcFdT83TsHY4UHM1dZeUqoRNPcom2CCOr0L1oKZoySzR8RBz8cAjPPXTUCKEUGIckg1N+//H8yJKeszy4Sfrvg==",
   "success": true,
-  "projectFilePath": "d:\\моя папка\\институт\\политех\\диплом\\TelegramClient\\TelegramClient.csproj",
+  "projectFilePath": "D:\\моя папка\\институт\\политех\\диплом\\Project\\OfficeTime\\TelegramClient\\TelegramClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alena\\.nuget\\packages\\mediatr\\12.3.0\\mediatr.12.3.0.nupkg.sha512",
     "C:\\Users\\Alena\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

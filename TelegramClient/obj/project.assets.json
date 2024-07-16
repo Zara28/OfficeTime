@@ -806,11 +806,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\моя папка\\институт\\политех\\диплом\\TelegramClient\\TelegramClient.csproj",
+      "projectUniqueName": "D:\\моя папка\\институт\\политех\\диплом\\Project\\OfficeTime\\TelegramClient\\TelegramClient.csproj",
       "projectName": "TelegramClient",
-      "projectPath": "d:\\моя папка\\институт\\политех\\диплом\\TelegramClient\\TelegramClient.csproj",
+      "projectPath": "D:\\моя папка\\институт\\политех\\диплом\\Project\\OfficeTime\\TelegramClient\\TelegramClient.csproj",
       "packagesPath": "C:\\Users\\Alena\\.nuget\\packages\\",
-      "outputPath": "d:\\моя папка\\институт\\политех\\диплом\\TelegramClient\\obj\\",
+      "outputPath": "D:\\моя папка\\институт\\политех\\диплом\\Project\\OfficeTime\\TelegramClient\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -830,8 +830,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "d:\\моя папка\\институт\\политех\\диплом\\Storage\\Realization.csproj": {
-              "projectPath": "d:\\моя папка\\институт\\политех\\диплом\\Storage\\Realization.csproj"
+            "D:\\моя папка\\институт\\политех\\диплом\\Project\\OfficeTime\\Storage\\Realization.csproj": {
+              "projectPath": "D:\\моя папка\\институт\\политех\\диплом\\Project\\OfficeTime\\Storage\\Realization.csproj"
             }
           }
         }

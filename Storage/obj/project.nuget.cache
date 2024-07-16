@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "p8sc6OKjDvIXWpKErCDthu33VXOGH7dZiyAPBxdrBXypJP7Mf5TMEYF1m6WVNEo6MykoVTeCNXMTUyobJE1jSQ==",
+  "dgSpecHash": "ZvbqXXuuKGo0feHXQLC6MMF/1GmHg1ddJiLjGZ59oFCMmX3LGST1sHyQd88qFFVHsvdhqRPCOBOzyMJHppR+hw==",
   "success": true,
-  "projectFilePath": "d:\\моя папка\\институт\\политех\\диплом\\Storage\\Realization.csproj",
+  "projectFilePath": "D:\\моя папка\\институт\\политех\\диплом\\Project\\OfficeTime\\Storage\\Realization.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alena\\.nuget\\packages\\mediatr\\12.3.0\\mediatr.12.3.0.nupkg.sha512",
     "C:\\Users\\Alena\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
