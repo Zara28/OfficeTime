@@ -1,0 +1,12 @@
+D:\моя папка\институт\политех\диплом\Interfaces\bin\Debug\net6.0\Interfaces.deps.json
+D:\моя папка\институт\политех\диплом\Interfaces\bin\Debug\net6.0\Interfaces.dll
+D:\моя папка\институт\политех\диплом\Interfaces\bin\Debug\net6.0\Interfaces.pdb
+D:\моя папка\институт\политех\диплом\Interfaces\obj\Debug\net6.0\Interfaces.csproj.AssemblyReference.cache
+D:\моя папка\институт\политех\диплом\Interfaces\obj\Debug\net6.0\Interfaces.GeneratedMSBuildEditorConfig.editorconfig
+D:\моя папка\институт\политех\диплом\Interfaces\obj\Debug\net6.0\Interfaces.AssemblyInfoInputs.cache
+D:\моя папка\институт\политех\диплом\Interfaces\obj\Debug\net6.0\Interfaces.AssemblyInfo.cs
+D:\моя папка\институт\политех\диплом\Interfaces\obj\Debug\net6.0\Interfaces.csproj.CoreCompileInputs.cache
+D:\моя папка\институт\политех\диплом\Interfaces\obj\Debug\net6.0\Interfaces.dll
+D:\моя папка\институт\политех\диплом\Interfaces\obj\Debug\net6.0\refint\Interfaces.dll
+D:\моя папка\институт\политех\диплом\Interfaces\obj\Debug\net6.0\Interfaces.pdb
+D:\моя папка\институт\политех\диплом\Interfaces\obj\Debug\net6.0\ref\Interfaces.dll

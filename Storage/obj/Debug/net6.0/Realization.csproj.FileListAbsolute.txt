@@ -1,0 +1,12 @@
+D:\моя папка\институт\политех\диплом\Storage\bin\Debug\net6.0\Realization.deps.json
+D:\моя папка\институт\политех\диплом\Storage\bin\Debug\net6.0\Realization.dll
+D:\моя папка\институт\политех\диплом\Storage\bin\Debug\net6.0\Realization.pdb
+D:\моя папка\институт\политех\диплом\Storage\obj\Debug\net6.0\Realization.csproj.AssemblyReference.cache
+D:\моя папка\институт\политех\диплом\Storage\obj\Debug\net6.0\Realization.GeneratedMSBuildEditorConfig.editorconfig
+D:\моя папка\институт\политех\диплом\Storage\obj\Debug\net6.0\Realization.AssemblyInfoInputs.cache
+D:\моя папка\институт\политех\диплом\Storage\obj\Debug\net6.0\Realization.AssemblyInfo.cs
+D:\моя папка\институт\политех\диплом\Storage\obj\Debug\net6.0\Realization.csproj.CoreCompileInputs.cache
+D:\моя папка\институт\политех\диплом\Storage\obj\Debug\net6.0\Realization.dll
+D:\моя папка\институт\политех\диплом\Storage\obj\Debug\net6.0\refint\Realization.dll
+D:\моя папка\институт\политех\диплом\Storage\obj\Debug\net6.0\Realization.pdb
+D:\моя папка\институт\политех\диплом\Storage\obj\Debug\net6.0\ref\Realization.dll
