@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
-using Realization.Database.Database.Models;
+using Realization.DBModels;
 using Realization.Models;
 using System;
 using System.Collections.Generic;
@@ -20,7 +20,8 @@ namespace Realization.Handles
         {
             using var _db = new officeContext();
 
-            var user = _db.Roles.Where(r => r.Login == request.Login && r.Password == request.Password).FirstOrDefault();
+            var user = _db.Users.Where(u => request.Login == u.Fio && request.Password == u.Password
+                                        && u.Password != null).FirstOrDefault();
 
             return Task.FromResult(user != null);
         }

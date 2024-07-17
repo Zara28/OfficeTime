@@ -3,17 +3,15 @@
 using System;
 using System.Collections.Generic;
 
-namespace Realization.Database.Database.Models;
+namespace Realization.DBModels;
 
-public partial class Role
+public partial class Post
 {
     public int Id { get; set; }
 
-    public string Name { get; set; }
+    public string Description { get; set; }
 
-    public string Login { get; set; }
-
-    public string Password { get; set; }
+    public double? Salary { get; set; }
 
     public virtual ICollection<User> Users { get; set; } = new List<User>();
 }

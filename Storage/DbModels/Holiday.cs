@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Realization.Database.Database.Models;
+namespace Realization.DBModels;
 
 public partial class Holiday
 {
@@ -13,15 +13,17 @@ public partial class Holiday
 
     public DateTime? Dateend { get; set; }
 
+    public DateTime? Datecreate { get; set; }
+
+    public DateTime? Dateapp { get; set; }
+
     public bool? Isappadmin { get; set; }
 
     public bool? Isappdirect { get; set; }
 
     public int? Userid { get; set; }
 
-    public DateTime? Datecreate { get; set; }
-
-    public bool? Isdelete { get; set; }
+    public bool? Ispay { get; set; }
 
     public virtual User User { get; set; }
 }

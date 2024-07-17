@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Realization.Database.Database.Models;
+namespace Realization.DBModels;
 
 public partial class User
 {
@@ -11,17 +11,23 @@ public partial class User
 
     public string Fio { get; set; }
 
+    public int? Postid { get; set; }
+
     public DateTime? Datebirth { get; set; }
 
     public DateTime? Datestart { get; set; }
 
     public int? Telegramid { get; set; }
 
-    public int? Roleid { get; set; }
+    public string Password { get; set; }
 
-    public bool? Isdelete { get; set; }
+    public virtual ICollection<Dayoff> Dayoffs { get; set; } = new List<Dayoff>();
 
     public virtual ICollection<Holiday> Holidays { get; set; } = new List<Holiday>();
 
-    public virtual Role Role { get; set; }
+    public virtual ICollection<Medical> Medicals { get; set; } = new List<Medical>();
+
+    public virtual Post Post { get; set; }
+
+    public virtual ICollection<TaskYt> TaskYts { get; set; } = new List<TaskYt>();
 }

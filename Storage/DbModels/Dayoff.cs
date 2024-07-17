@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Realization.Database.Database.Models;
+namespace Realization.DBModels;
 
 public partial class Dayoff
 {
@@ -11,11 +11,13 @@ public partial class Dayoff
 
     public DateTime? Date { get; set; }
 
+    public DateTime? Datecreate { get; set; }
+
+    public DateTime? Dateapp { get; set; }
+
     public bool? Isapp { get; set; }
 
     public int? Userid { get; set; }
-
-    public DateTime? Datecreate { get; set; }
 
     public virtual User User { get; set; }
 }

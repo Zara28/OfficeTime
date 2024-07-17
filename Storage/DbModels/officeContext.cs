@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace Realization.Database.Database.Models;
+namespace Realization.DBModels;
 
 public partial class officeContext : DbContext
 {
@@ -23,7 +23,11 @@ public partial class officeContext : DbContext
 
     public virtual DbSet<Holiday> Holidays { get; set; }
 
-    public virtual DbSet<Role> Roles { get; set; }
+    public virtual DbSet<Medical> Medicals { get; set; }
+
+    public virtual DbSet<Post> Posts { get; set; }
+
+    public virtual DbSet<TaskYt> TaskYts { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
 
@@ -47,37 +51,39 @@ public partial class officeContext : DbContext
 
         modelBuilder.Entity<Dayoff>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("dayoff");
+            entity.HasKey(e => e.Id).HasName("dayoff_pkey");
 
+            entity.ToTable("dayoff");
+
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Date)
                 .HasColumnType("timestamp without time zone")
                 .HasColumnName("date");
+            entity.Property(e => e.Dateapp)
+                .HasColumnType("timestamp without time zone")
+                .HasColumnName("dateapp");
             entity.Property(e => e.Datecreate)
-                .HasDefaultValueSql("CURRENT_TIMESTAMP")
                 .HasColumnType("timestamp without time zone")
                 .HasColumnName("datecreate");
-            entity.Property(e => e.Id)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("id");
             entity.Property(e => e.Isapp).HasColumnName("isapp");
             entity.Property(e => e.Userid).HasColumnName("userid");
 
-            entity.HasOne(d => d.User).WithMany()
+            entity.HasOne(d => d.User).WithMany(p => p.Dayoffs)
                 .HasForeignKey(d => d.Userid)
-                .HasConstraintName("fk_holiday_user");
+                .HasConstraintName("fk_dayoff_user");
         });
 
         modelBuilder.Entity<Holiday>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("holiday_pk");
+            entity.HasKey(e => e.Id).HasName("holiday_pkey");
 
             entity.ToTable("holiday");
 
             entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Dateapp)
+                .HasColumnType("timestamp without time zone")
+                .HasColumnName("dateapp");
             entity.Property(e => e.Datecreate)
-                .HasDefaultValueSql("CURRENT_TIMESTAMP")
                 .HasColumnType("timestamp without time zone")
                 .HasColumnName("datecreate");
             entity.Property(e => e.Dateend)
@@ -88,7 +94,7 @@ public partial class officeContext : DbContext
                 .HasColumnName("datestart");
             entity.Property(e => e.Isappadmin).HasColumnName("isappadmin");
             entity.Property(e => e.Isappdirect).HasColumnName("isappdirect");
-            entity.Property(e => e.Isdelete).HasColumnName("isdelete");
+            entity.Property(e => e.Ispay).HasColumnName("ispay");
             entity.Property(e => e.Userid).HasColumnName("userid");
 
             entity.HasOne(d => d.User).WithMany(p => p.Holidays)
@@ -96,33 +102,68 @@ public partial class officeContext : DbContext
                 .HasConstraintName("fk_holiday_user");
         });
 
-        modelBuilder.Entity<Role>(entity =>
+        modelBuilder.Entity<Medical>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("role_pk");
+            entity.HasKey(e => e.Id).HasName("medical_pkey");
 
-            entity.ToTable("role");
-
-            entity.HasIndex(e => e.Id, "role_unique").IsUnique();
+            entity.ToTable("medical");
 
             entity.Property(e => e.Id).HasColumnName("id");
-            entity.Property(e => e.Login)
+            entity.Property(e => e.Datecreate)
+                .HasColumnType("timestamp without time zone")
+                .HasColumnName("datecreate");
+            entity.Property(e => e.Dateend)
+                .HasColumnType("timestamp without time zone")
+                .HasColumnName("dateend");
+            entity.Property(e => e.Datestart)
+                .HasColumnType("timestamp without time zone")
+                .HasColumnName("datestart");
+            entity.Property(e => e.Userid).HasColumnName("userid");
+
+            entity.HasOne(d => d.User).WithMany(p => p.Medicals)
+                .HasForeignKey(d => d.Userid)
+                .HasConstraintName("fk_medical_user");
+        });
+
+        modelBuilder.Entity<Post>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("post_pkey");
+
+            entity.ToTable("post");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Description).HasColumnName("description");
+            entity.Property(e => e.Salary).HasColumnName("salary");
+        });
+
+        modelBuilder.Entity<TaskYt>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("task_pkey");
+
+            entity.ToTable("taskYT");
+
+            entity.Property(e => e.Id)
+                .HasDefaultValueSql("nextval('task_id_seq'::regclass)")
+                .HasColumnName("id");
+            entity.Property(e => e.Date)
+                .HasColumnType("timestamp without time zone")
+                .HasColumnName("date");
+            entity.Property(e => e.Key)
                 .HasMaxLength(50)
-                .HasColumnName("login");
-            entity.Property(e => e.Name)
-                .HasMaxLength(50)
-                .HasColumnName("name");
-            entity.Property(e => e.Password)
-                .HasMaxLength(50)
-                .HasColumnName("password");
+                .HasColumnName("key");
+            entity.Property(e => e.Time).HasColumnName("time");
+            entity.Property(e => e.Userid).HasColumnName("userid");
+
+            entity.HasOne(d => d.User).WithMany(p => p.TaskYts)
+                .HasForeignKey(d => d.Userid)
+                .HasConstraintName("fk_task_user");
         });
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("users_pk");
+            entity.HasKey(e => e.Id).HasName("users_pkey");
 
             entity.ToTable("users");
-
-            entity.HasIndex(e => e.Id, "users_unique").IsUnique();
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Datebirth)
@@ -134,13 +175,13 @@ public partial class officeContext : DbContext
             entity.Property(e => e.Fio)
                 .HasMaxLength(255)
                 .HasColumnName("fio");
-            entity.Property(e => e.Isdelete).HasColumnName("isdelete");
-            entity.Property(e => e.Roleid).HasColumnName("roleid");
+            entity.Property(e => e.Password).HasColumnName("password");
+            entity.Property(e => e.Postid).HasColumnName("postid");
             entity.Property(e => e.Telegramid).HasColumnName("telegramid");
 
-            entity.HasOne(d => d.Role).WithMany(p => p.Users)
-                .HasForeignKey(d => d.Roleid)
-                .HasConstraintName("fk_users_role");
+            entity.HasOne(d => d.Post).WithMany(p => p.Users)
+                .HasForeignKey(d => d.Postid)
+                .HasConstraintName("fk_post_user");
         });
 
         OnModelCreatingPartial(modelBuilder);

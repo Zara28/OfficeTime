@@ -7,9 +7,9 @@
    "IncludeConnectionString": true,
    "ModelNamespace": null,
    "OutputContextPath": null,
-   "OutputPath": "Database.Models",
+   "OutputPath": "DBModels",
    "PreserveCasingWithRegex": true,
-   "ProjectRootNamespace": "Realization.Database",
+   "ProjectRootNamespace": "Realization",
    "Schemas": null,
    "SelectedHandlebarsLanguage": 2,
    "SelectedToBeGenerated": 0,
@@ -24,7 +24,15 @@
          "ObjectType": 0
       },
       {
-         "Name": "public.role",
+         "Name": "public.medical",
+         "ObjectType": 0
+      },
+      {
+         "Name": "public.post",
+         "ObjectType": 0
+      },
+      {
+         "Name": "public.taskYT",
          "ObjectType": 0
       },
       {

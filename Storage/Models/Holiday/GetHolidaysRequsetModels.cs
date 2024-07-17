@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using Realization.Database.Database.Models;
+using Realization.DTOModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Realization.Models
 {
-    public class GetHolidaysRequsetModels : IRequest<List<Realization.Database.Database.Models.Holiday>>
+    public class GetHolidaysRequsetModels : IRequest<List<HolidayDTO>>
     {
         public DateTime? Start { get; set; }
 

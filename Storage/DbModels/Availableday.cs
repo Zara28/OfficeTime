@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Realization.Database.Database.Models;
+namespace Realization.DBModels;
 
 public partial class Availableday
 {

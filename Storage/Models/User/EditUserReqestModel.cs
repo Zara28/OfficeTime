@@ -17,5 +17,9 @@ namespace Realization.Models
         public DateTime? Datestart { get; set; }
 
         public int? Telegramid { get; set; }
+
+        public int postId { get; set; }
+
+        public string Password { get; set; }
     }
 }

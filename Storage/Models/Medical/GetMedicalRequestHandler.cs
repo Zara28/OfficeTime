@@ -6,14 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Realization.Models
+namespace Realization.Models.Medical
 {
-    public class GetDaysOffRequestModel:IRequest<List<DayOffDTO>>
+    public class GetMedicalRequestHandler : IRequest<List<MedicalDTO>>
     {
+        public int? UserId { get; set; }
         public DateTime? Start { get; set; }
 
         public DateTime? End { get; set; }
-
-        public int? id { get; set; }
     }
 }

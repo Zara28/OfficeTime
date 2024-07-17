@@ -1,5 +1,4 @@
 ﻿using MediatR;
-using Realization.DBModels;
 using Realization.DTOModels;
 using System;
 using System.Collections.Generic;
@@ -7,10 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Realization.Models
+namespace Realization.Models.Post
 {
-    public class GetUsersRequestModel : IRequest<List<UserDTO>>
+    public class GetPostRequestModel : IRequest<List<PostDTO>>
     {
-        public int? id { get; set; }
+        public int? PostId { get; set; } 
     }
 }
