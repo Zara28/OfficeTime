@@ -29,5 +29,7 @@ public partial class User
 
     public virtual Post Post { get; set; }
 
+    public virtual ICollection<Recycling> Recyclings { get; set; } = new List<Recycling>();
+
     public virtual ICollection<TaskYt> TaskYts { get; set; } = new List<TaskYt>();
 }

@@ -27,6 +27,8 @@ public partial class officeContext : DbContext
 
     public virtual DbSet<Post> Posts { get; set; }
 
+    public virtual DbSet<Recycling> Recyclings { get; set; }
+
     public virtual DbSet<TaskYt> TaskYts { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
@@ -134,6 +136,25 @@ public partial class officeContext : DbContext
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Description).HasColumnName("description");
             entity.Property(e => e.Salary).HasColumnName("salary");
+        });
+
+        modelBuilder.Entity<Recycling>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("recycling_pkey");
+
+            entity.ToTable("recycling");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Date)
+                .HasColumnType("timestamp without time zone")
+                .HasColumnName("date");
+            entity.Property(e => e.Hour).HasColumnName("hour");
+            entity.Property(e => e.Isapp).HasColumnName("isapp");
+            entity.Property(e => e.Userid).HasColumnName("userid");
+
+            entity.HasOne(d => d.User).WithMany(p => p.Recyclings)
+                .HasForeignKey(d => d.Userid)
+                .HasConstraintName("fk_recycling_user");
         });
 
         modelBuilder.Entity<TaskYt>(entity =>
