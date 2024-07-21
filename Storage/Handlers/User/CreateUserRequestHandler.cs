@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using Realization.Database.Database.Models;
+using Realization.DBModels;
 using Realization.Models;
 using System;
 using System.Collections.Generic;
@@ -24,7 +24,7 @@ namespace Realization.Handles
                 Datebirth = request.Datebirth,
                 Datestart = request.Datestart,
                 Telegramid = request.Telegramid,
-                Roleid = null
+                Postid = request.postId
             };
             await db.Users.AddAsync(newUser);
             await db.SaveChangesAsync();

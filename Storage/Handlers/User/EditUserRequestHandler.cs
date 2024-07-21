@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using Realization.Database.Database.Models;
+using Realization.DBModels;
 using Realization.Models;
 using System;
 using System.Collections.Generic;
@@ -25,6 +25,7 @@ namespace Realization.Handles
             oldUser.Datestart = request.Datestart;
             oldUser.Datebirth = request.Datebirth;
             oldUser.Telegramid = request.Telegramid;
+            oldUser.Postid = request.postId;
 
             _db.Users.Update(oldUser);
 

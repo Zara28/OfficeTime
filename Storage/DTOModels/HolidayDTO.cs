@@ -22,5 +22,6 @@ namespace Realization.DTOModels
 
         public bool IsApprovedAdmin { get; set; }
         public bool IsApprovedDirector { get; set; }
+        public bool IsPay { get; set; }
     }
 }

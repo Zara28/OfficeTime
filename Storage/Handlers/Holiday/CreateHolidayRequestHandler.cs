@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using Realization.Database.Database.Models;
+using Realization.DBModels;
 using Realization.Models.Holiday;
 using System;
 using System.Collections.Generic;
@@ -24,13 +24,12 @@ namespace Realization.Handles.Holiday
                 throw new ArgumentException("Не хватает дней");
             }
 
-            _db.Holidays.Add(new Database.Database.Models.Holiday
+            _db.Holidays.Add(new DBModels.Holiday
             {
                 Datecreate = DateTime.Now,
                 Dateend = request.Dateend,
                 Datestart = request.Datestart,
                 Userid = request.Userid,
-                Isdelete = false,
                 Isappadmin = request.Isappadmin,
                 Isappdirect = request.Isappdirect,
             });

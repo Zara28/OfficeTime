@@ -22,7 +22,5 @@ namespace Realization.Models.Holiday
         public int? Userid { get; set; }
 
         public DateTime? Datecreate { get; set; }
-
-        public bool? Isdelete { get; set; }
     }
 }

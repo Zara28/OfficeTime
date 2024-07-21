@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace Realization.Models.Post
 {
-    public class CreatePostRequestHandler : IRequest
+    public class DeletePostRequestModel : IRequest
     {
-        public string Description { get; set; }
-
-        public float? Salary { get; set; }
+        public int Id { get; set; }
     }
 }

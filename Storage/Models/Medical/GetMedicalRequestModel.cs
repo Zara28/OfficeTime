@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Realization.Models.Medical
 {
-    public class GetMedicalRequestHandler : IRequest<List<MedicalDTO>>
+    public class GetMedicalRequestModel : IRequest<List<MedicalDTO>>
     {
         public int? UserId { get; set; }
         public DateTime? Start { get; set; }

@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using Realization.Database.Database.Models;
+using Realization.DBModels;
 using Realization.Models.Holiday;
 using System;
 using System.Collections.Generic;

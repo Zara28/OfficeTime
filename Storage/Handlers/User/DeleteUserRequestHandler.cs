@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using Realization.Database.Database.Models;
+using Realization.DBModels;
 using Realization.Models;
 using System;
 using System.Collections.Generic;
@@ -20,9 +20,7 @@ namespace Realization.Handles
             if (user == null)
                 throw new ArgumentException();
 
-            user.Isdelete = true;
-
-            _db.Users.Update(user);
+            _db.Users.Remove(user);
 
             await _db.SaveChangesAsync();
         }

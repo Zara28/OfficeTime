@@ -12,4 +12,9 @@ namespace Realization.Models.Post
     {
         public int? PostId { get; set; } 
     }
+
+    public class GetListPostRequestModel : IRequest<List<PostListDTO>>
+    {
+        public int? PostId { get; set; }
+    }
 }

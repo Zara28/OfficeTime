@@ -12,6 +12,6 @@ namespace Realization.DTOModels
 
         public string Description { get; set; }
 
-        public float Salary { get; set; }
+        public double Salary { get; set; }
     }
 }

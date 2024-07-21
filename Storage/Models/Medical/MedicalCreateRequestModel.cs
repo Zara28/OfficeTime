@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Realization.Models
 {
-    public class MedicalCreateRequestHandler : IRequest
+    public class MedicalCreateRequestModel : IRequest
     {
         public int User { get; set; }
 

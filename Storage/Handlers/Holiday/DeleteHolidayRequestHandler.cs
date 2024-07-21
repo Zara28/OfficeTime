@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using Realization.Database.Database.Models;
+using Realization.DBModels;
 using Realization.Models.Holiday;
 using System;
 using System.Collections.Generic;
@@ -20,9 +20,7 @@ namespace Realization.Handles.Holiday
             if (holiday == null)
                 throw new ArgumentException();
 
-            holiday.Isdelete = true;
-
-            _db.Holidays.Update(holiday);
+            _db.Holidays.Remove(holiday);
 
             await _db.SaveChangesAsync();
         }

@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace Realization.Models.Post
 {
-    public class UpdatePostRequestHandler : IRequest
+    public class CreatePostRequestModel : IRequest
     {
-        public int Id { get; set; }
         public string Description { get; set; }
-        public float Salary { get; set; }
+
+        public float? Salary { get; set; }
     }
 }

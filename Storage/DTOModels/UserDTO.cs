@@ -8,7 +8,7 @@ namespace Realization.DTOModels
 {
     public class UserDTO
     {
-        int Id { get; set; }
+        public int Id { get; set; }
         public string FIO { get; set; }
         
         public PostDTO Post { get; set; }
@@ -16,6 +16,6 @@ namespace Realization.DTOModels
         public DateTime DateBirth {get; set; }
         public DateTime DateStart {get; set; }
 
-        public float HourCount {get; set; }
+        public float? HourCount {get; set; }
     }
 }
